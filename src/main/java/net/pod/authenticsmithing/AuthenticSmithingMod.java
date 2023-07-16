@@ -1,4 +1,4 @@
-package net.pod.smithplusmod;
+package net.pod.authenticsmithing;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -16,15 +16,16 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.pod.authenticsmithing.registry.ModRecipes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(SmithPlusMod.MODID)
-public class SmithPlusMod {
-    public static final String MODID = "smithplus";
+@Mod(AuthenticSmithingMod.MODID)
+public class AuthenticSmithingMod {
+    public static final String MODID = "authenticsmithing";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public SmithPlusMod() {
+    public AuthenticSmithingMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -32,6 +33,8 @@ public class SmithPlusMod {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         LOGGER.info("Hello from Smith+ Mod!");
+
+        ModRecipes.RECIPES.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
