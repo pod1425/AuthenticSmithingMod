@@ -1,4 +1,4 @@
-package net.pod.authenticsmithing.datagen.builders;
+package net.pod.authenticsmithing.datagen.builder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 

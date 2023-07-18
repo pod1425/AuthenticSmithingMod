@@ -1,4 +1,4 @@
-package net.pod.authenticsmithing.datagen;
+package net.pod.authenticsmithing.datagen.provider;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.pod.authenticsmithing.datagen.builders.DisableRecipeBuilder;
+import net.pod.authenticsmithing.datagen.builder.DisableRecipeBuilder;
 
 import java.util.function.Consumer;
 
@@ -18,6 +18,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+        disableRecipes(pWriter);
+
+    }
+
+    protected void disableRecipes(Consumer<FinishedRecipe> pWriter) {
         disable(Items.DIAMOND_LEGGINGS, pWriter);
         disable(Items.DIAMOND_HELMET, pWriter);
         disable(Items.DIAMOND_BOOTS, pWriter);

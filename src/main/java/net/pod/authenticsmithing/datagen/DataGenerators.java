@@ -8,6 +8,7 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.pod.authenticsmithing.AuthenticSmithingMod;
+import net.pod.authenticsmithing.datagen.provider.ModRecipeProvider;
 
 import java.util.concurrent.CompletableFuture;
 
