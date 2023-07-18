@@ -30,7 +30,6 @@ public class AuthenticSmithingMod {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         LOGGER.info("Hello from Smith+ Mod!");
 
@@ -41,12 +40,7 @@ public class AuthenticSmithingMod {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
-        if (Config.logDirtBlock)
-            LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
-
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
-
-        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
 
     // Add the example block item to the building blocks tab
