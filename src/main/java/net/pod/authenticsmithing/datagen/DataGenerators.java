@@ -8,6 +8,8 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.pod.authenticsmithing.AuthenticSmithingMod;
+import net.pod.authenticsmithing.datagen.provider.ModItemModelProvider;
+import net.pod.authenticsmithing.datagen.provider.ModLootTableProvider;
 import net.pod.authenticsmithing.datagen.provider.ModRecipeProvider;
 
 import java.util.concurrent.CompletableFuture;
@@ -22,5 +24,10 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
+        //generator.addProvider(event.includeServer(), new ModBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
+
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
+        //generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
     }
 }

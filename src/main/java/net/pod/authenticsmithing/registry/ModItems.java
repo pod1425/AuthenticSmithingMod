@@ -36,18 +36,19 @@ public class ModItems {
             new Item.Properties());
     public static final RegistryObject<Item> JUNGLE_BARK = registerItem("jungle_bark", INGREDIENTS,
             new Item.Properties());
-    public static final RegistryObject<Item> MANGROVE_BARK = registerItem("mangrove_bark", INGREDIENTS,
-            new Item.Properties());
-    public static final RegistryObject<Item> CHERRY_BARK = registerItem("cherry_bark", INGREDIENTS,
-            new Item.Properties());
+    //TODO: add cherry and mangrove bark
+    //public static final RegistryObject<Item> MANGROVE_BARK = registerItem("mangrove_bark", INGREDIENTS,
+    //        new Item.Properties());
+    //public static final RegistryObject<Item> CHERRY_BARK = registerItem("cherry_bark", INGREDIENTS,
+    //        new Item.Properties());
 
-    public static final RegistryObject<Item> WARPED_BARK = registerItem("warped_bark", COMBAT,
+    public static final RegistryObject<Item> WARPED_BARK = registerItem("warped_bark", INGREDIENTS,
             new Item.Properties());
-    public static final RegistryObject<Item> CRIMSON_BARK = registerItem("crimson_bark", COMBAT,
+    public static final RegistryObject<Item> CRIMSON_BARK = registerItem("crimson_bark", INGREDIENTS,
             new Item.Properties());
-    public static final RegistryObject<Item> DARK_OAK_BARK = registerItem("dark_oak_bark", COMBAT,
+    public static final RegistryObject<Item> DARK_OAK_BARK = registerItem("dark_oak_bark", INGREDIENTS,
             new Item.Properties());
-    public static final RegistryObject<Item> ACACIA_BARK = registerItem("acacia_bark", COMBAT,
+    public static final RegistryObject<Item> ACACIA_BARK = registerItem("acacia_bark", INGREDIENTS,
             new Item.Properties());
 
     public static void register(IEventBus eventBus) {

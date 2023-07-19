@@ -21,6 +21,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.pod.authenticsmithing.registry.ModBlocks;
 import net.pod.authenticsmithing.registry.ModItems;
 import net.pod.authenticsmithing.registry.ModRecipes;
 import org.slf4j.Logger;
@@ -44,7 +45,7 @@ public class AuthenticSmithingMod {
         LOGGER.info("Hello from Authentic Smithing Mod!");
 
         ModItems.register(modEventBus);
-        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModRecipes.register(modEventBus);
     }
 
