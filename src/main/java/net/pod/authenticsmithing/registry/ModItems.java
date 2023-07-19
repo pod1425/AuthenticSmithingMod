@@ -15,6 +15,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import static net.pod.authenticsmithing.registry.CreativeTabLists.*;
+import static net.pod.authenticsmithing.registry.ModelLists.COMMON;
 /*
     Just a template to copy
 
@@ -28,13 +29,13 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, AuthenticSmithingMod.MODID);
 
     //TODO: change all items to respective tabs
-    public static final RegistryObject<Item> OAK_BARK = registerItem("oak_bark", INGREDIENTS,
+    public static final RegistryObject<Item> OAK_BARK = registerItem("oak_bark", INGREDIENTS, COMMON,
             new Item.Properties());
-    public static final RegistryObject<Item> BIRCH_BARK = registerItem("birch_bark", INGREDIENTS,
+    public static final RegistryObject<Item> BIRCH_BARK = registerItem("birch_bark", INGREDIENTS, COMMON,
             new Item.Properties());
-    public static final RegistryObject<Item> SPRUCE_BARK = registerItem("spruce_bark", INGREDIENTS,
+    public static final RegistryObject<Item> SPRUCE_BARK = registerItem("spruce_bark", INGREDIENTS, COMMON,
             new Item.Properties());
-    public static final RegistryObject<Item> JUNGLE_BARK = registerItem("jungle_bark", INGREDIENTS,
+    public static final RegistryObject<Item> JUNGLE_BARK = registerItem("jungle_bark", INGREDIENTS, COMMON,
             new Item.Properties());
     //TODO: add cherry and mangrove bark
     //public static final RegistryObject<Item> MANGROVE_BARK = registerItem("mangrove_bark", INGREDIENTS,
@@ -42,22 +43,24 @@ public class ModItems {
     //public static final RegistryObject<Item> CHERRY_BARK = registerItem("cherry_bark", INGREDIENTS,
     //        new Item.Properties());
 
-    public static final RegistryObject<Item> WARPED_BARK = registerItem("warped_bark", INGREDIENTS,
+    public static final RegistryObject<Item> WARPED_BARK = registerItem("warped_bark", INGREDIENTS, COMMON,
             new Item.Properties());
-    public static final RegistryObject<Item> CRIMSON_BARK = registerItem("crimson_bark", INGREDIENTS,
+    public static final RegistryObject<Item> CRIMSON_BARK = registerItem("crimson_bark", INGREDIENTS, COMMON,
             new Item.Properties());
-    public static final RegistryObject<Item> DARK_OAK_BARK = registerItem("dark_oak_bark", INGREDIENTS,
+    public static final RegistryObject<Item> DARK_OAK_BARK = registerItem("dark_oak_bark", INGREDIENTS, COMMON,
             new Item.Properties());
-    public static final RegistryObject<Item> ACACIA_BARK = registerItem("acacia_bark", INGREDIENTS,
+    public static final RegistryObject<Item> ACACIA_BARK = registerItem("acacia_bark", INGREDIENTS, COMMON,
             new Item.Properties());
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
 
-    private static RegistryObject<Item> registerItem(String name, List<RegistryObject<Item>> tab, Item.Properties itemProperties) {
+    private static RegistryObject<Item> registerItem(String name, List<RegistryObject<Item>> tab,
+                 List<RegistryObject<Item>> model, Item.Properties itemProperties) {
         RegistryObject<Item> item = ITEMS.register(name, () -> new Item(itemProperties));
         tab.add(item);
+        model.add(item);
         return item;
     }
 }

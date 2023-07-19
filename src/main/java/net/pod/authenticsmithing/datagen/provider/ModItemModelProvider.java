@@ -10,6 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.pod.authenticsmithing.AuthenticSmithingMod;
 import net.pod.authenticsmithing.registry.CreativeTabLists;
 import net.pod.authenticsmithing.registry.ModItems;
+import net.pod.authenticsmithing.registry.ModelLists;
 import net.pod.authenticsmithing.util.FileHelper;
 
 import java.io.File;
@@ -23,17 +24,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        Set<RegistryObject<Item>> simpleItems = new HashSet<>();
-        simpleItems.addAll(CreativeTabLists.FOOD);
-        simpleItems.addAll(CreativeTabLists.SPAWN);
-        simpleItems.addAll(CreativeTabLists.INGREDIENTS);
+        for (RegistryObject<Item> item : ModelLists.COMMON) {
+            simpleItem(item);
+        }
         Map<String, RegistryObject<Item>> customItems = new HashMap<>();
         // add custom model items here...
 
-        simpleItems.removeAll(customItems.values());
-        for (RegistryObject<Item> item : simpleItems) {
-            simpleItem(item);
-        }
         for (Map.Entry<String, RegistryObject<Item>> entry : customItems.entrySet()) {
             customModelItem(entry.getValue(), entry.getKey());
         }
