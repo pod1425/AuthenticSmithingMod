@@ -16,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.pod.authenticsmithing.registry.ModItems;
 import net.pod.authenticsmithing.registry.ModRecipes;
 import org.slf4j.Logger;
 
@@ -33,7 +34,8 @@ public class AuthenticSmithingMod {
 
         LOGGER.info("Hello from Smith+ Mod!");
 
-        ModRecipes.RECIPES.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModRecipes.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
