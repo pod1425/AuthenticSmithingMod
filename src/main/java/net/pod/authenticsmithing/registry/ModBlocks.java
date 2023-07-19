@@ -13,8 +13,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pod.authenticsmithing.AuthenticSmithingMod;
 
+import java.util.List;
 import java.util.function.Supplier;
-
+import static net.pod.authenticsmithing.registry.CreativeTabLists.*;
 /*
 Template to copy
 
@@ -27,17 +28,17 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AuthenticSmithingMod.MODID);
 
-    public static final RegistryObject<Block> TIN_BLOCK = registerBlock("alexandrite_block",
+    public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", BUILDING,
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
-    public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_alexandrite_block",
+    public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block", BUILDING,
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, List<RegistryObject<Item>> tab, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
+        tab.add(registerBlockItem(name, toReturn));
         return toReturn;
     }
 

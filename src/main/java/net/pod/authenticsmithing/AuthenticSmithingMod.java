@@ -44,6 +44,7 @@ public class AuthenticSmithingMod {
         LOGGER.info("Hello from Authentic Smithing Mod!");
 
         ModItems.register(modEventBus);
+        ModItems.register(modEventBus);
         ModRecipes.register(modEventBus);
     }
 
@@ -68,15 +69,15 @@ public class AuthenticSmithingMod {
         } else if (tab.equals(CreativeModeTabs.TOOLS_AND_UTILITIES)) {
             items.addAll(TOOLS);
         } else if (tab.equals(CreativeModeTabs.BUILDING_BLOCKS)) {
-            //items.addAll(TOOLS);
+            items.addAll(BUILDING);
         } else if (tab.equals(CreativeModeTabs.COLORED_BLOCKS)) {
-            //items.addAll(TOOLS);
+            items.addAll(COLORED);
         } else if (tab.equals(CreativeModeTabs.FUNCTIONAL_BLOCKS)) {
-            //items.addAll(TOOLS);
+            items.addAll(FUNCTIONAL);
         } else if (tab.equals(CreativeModeTabs.REDSTONE_BLOCKS)) {
-            //items.addAll(TOOLS);
+            items.addAll(REDSTONE);
         } else if (tab.equals(CreativeModeTabs.SPAWN_EGGS)) {
-            items.addAll(TOOLS);
+            items.addAll(SPAWN);
         } else {
             return;
         }
