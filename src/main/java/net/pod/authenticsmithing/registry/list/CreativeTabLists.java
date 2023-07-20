@@ -16,4 +16,10 @@ public class CreativeTabLists {
     public static final List<RegistryObject<Item>> BUILDING = new ArrayList<>();
     public static final List<RegistryObject<Item>> COLORED = new ArrayList<>();
     public static final List<RegistryObject<Item>> FUNCTIONAL = new ArrayList<>();
+
+    public static final List<RegistryObject<Item>> MOD_BLOCKS = new ArrayList<>();
+    public static final List<RegistryObject<Item>> MOD_MATERIALS = new ArrayList<>();
+    public static final List<RegistryObject<Item>> MOD_PARTS = new ArrayList<>();
+    public static final List<RegistryObject<Item>> MOD_TOOLS = new ArrayList<>();
+    public static final List<RegistryObject<Item>> MOD_JEWELERY = new ArrayList<>();
 }

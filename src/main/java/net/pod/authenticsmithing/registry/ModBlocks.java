@@ -29,10 +29,10 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AuthenticSmithingMod.MODID);
 
-    public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", BUILDING, BLOCK_CUBE,
+    public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", MOD_BLOCKS, BLOCK_CUBE,
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
-    public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block", BUILDING, BLOCK_CUBE,
+    public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block", MOD_BLOCKS, BLOCK_CUBE,
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
