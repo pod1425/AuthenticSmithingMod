@@ -8,6 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.pod.authenticsmithing.AuthenticSmithingMod;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 import static net.pod.authenticsmithing.registry.list.CreativeTabLists.*;
 import static net.pod.authenticsmithing.registry.list.ModelLists.COMMON;
@@ -25,35 +26,23 @@ public class ModItems {
 
     //TODO: change all items to respective tabs
     public static final RegistryObject<Item> OAK_BARK = registerItem("oak_bark", MOD_MATERIALS, COMMON,
-            new Item.Properties());
-    public static final RegistryObject<Item> BIRCH_BARK = registerItem("birch_bark", MOD_MATERIALS, COMMON,
-            new Item.Properties());
-    public static final RegistryObject<Item> SPRUCE_BARK = registerItem("spruce_bark", MOD_MATERIALS, COMMON,
-            new Item.Properties());
-    public static final RegistryObject<Item> JUNGLE_BARK = registerItem("jungle_bark", MOD_MATERIALS, COMMON,
-            new Item.Properties());
+            () -> new Item(new Item.Properties()));
+
     //TODO: add cherry and mangrove bark
     //public static final RegistryObject<Item> MANGROVE_BARK = registerItem("mangrove_bark", INGREDIENTS,
     //        new Item.Properties());
     //public static final RegistryObject<Item> CHERRY_BARK = registerItem("cherry_bark", INGREDIENTS,
     //        new Item.Properties());
 
-    public static final RegistryObject<Item> WARPED_BARK = registerItem("warped_bark", MOD_MATERIALS, COMMON,
-            new Item.Properties());
-    public static final RegistryObject<Item> CRIMSON_BARK = registerItem("crimson_bark", MOD_MATERIALS, COMMON,
-            new Item.Properties());
-    public static final RegistryObject<Item> DARK_OAK_BARK = registerItem("dark_oak_bark", MOD_MATERIALS, COMMON,
-            new Item.Properties());
-    public static final RegistryObject<Item> ACACIA_BARK = registerItem("acacia_bark", MOD_MATERIALS, COMMON,
-            new Item.Properties());
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
 
     private static RegistryObject<Item> registerItem(String name, List<RegistryObject<Item>> tab,
-                 List<RegistryObject<Item>> model, Item.Properties itemProperties) {
-        RegistryObject<Item> item = ITEMS.register(name, () -> new Item(itemProperties));
+                 List<RegistryObject<Item>> model, Supplier<Item> itemSupplier) {
+        RegistryObject<Item> item = ITEMS.register(name, itemSupplier);
         tab.add(item);
         model.add(item);
         return item;

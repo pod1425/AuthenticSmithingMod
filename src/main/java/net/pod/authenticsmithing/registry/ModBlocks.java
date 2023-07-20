@@ -3,6 +3,7 @@ package net.pod.authenticsmithing.registry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -29,12 +30,64 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AuthenticSmithingMod.MODID);
 
+    public static final RegistryObject<Block> AMBER_ORE = registerBlock("amber_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_ORE)));
+
+    public static final RegistryObject<Block> CUT_AMBER_BLOCK = registerBlock("cut_amber_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
+    public static final RegistryObject<Block> CUT_AMETHYST_BLOCK = registerBlock("cut_amethyst_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
+    public static final RegistryObject<Block> CUT_DIAMOND_BLOCK = registerBlock("cut_diamond_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
+    public static final RegistryObject<Block> CUT_LAPIS_BLOCK = registerBlock("cut_lapis_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
+    public static final RegistryObject<Block> CUT_QUARTZ_BLOCK = registerBlock("cut_quartz_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
+    public static final RegistryObject<Block> CUT_REDSTONE_BLOCK = registerBlock("cut_redstone_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
+    public static final RegistryObject<Block> DEEPSLATE_AMBER_ORE = registerBlock("deepslate_amber_ore", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_ORE)));
+
+    public static final RegistryObject<Block> DEEPSLATE_LEAD_ORE = registerBlock("deepslate_lead_ore", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+
+    public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = registerBlock("deepslate_silver_ore", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+
+    public static final RegistryObject<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+
+    public static final RegistryObject<Block> LEAD_BLOCK = registerBlock("lead_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> LEAD_ORE = registerBlock("lead_ore", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+
+    public static final RegistryObject<Block> RAW_LEAD_BLOCK = registerBlock("raw_lead_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> RAW_SILVER_BLOCK = registerBlock("raw_silver_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> SILVER_BLOCK = registerBlock("silver_block", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> SILVER_ORE = registerBlock("silver_ore", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+
     public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", MOD_BLOCKS, BLOCK_CUBE,
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .requiresCorrectToolForDrops().strength(4.0F, 6.0F)));
+
     public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block", MOD_BLOCKS, BLOCK_CUBE,
-            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK)
+                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F)));
 
 
     private static RegistryObject<Block>
