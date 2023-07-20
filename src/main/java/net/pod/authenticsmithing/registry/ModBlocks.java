@@ -15,7 +15,8 @@ import net.pod.authenticsmithing.AuthenticSmithingMod;
 
 import java.util.List;
 import java.util.function.Supplier;
-import static net.pod.authenticsmithing.registry.CreativeTabLists.*;
+import static net.pod.authenticsmithing.registry.list.CreativeTabLists.*;
+import static net.pod.authenticsmithing.registry.list.ModelLists.*;
 /*
 Template to copy
 
@@ -28,21 +29,24 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AuthenticSmithingMod.MODID);
 
-    public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", BUILDING,
+    public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", BUILDING, BLOCK_CUBE,
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
-    public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block", BUILDING,
+    public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block", BUILDING, BLOCK_CUBE,
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, List<RegistryObject<Item>> tab, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+    private static RegistryObject<Block>
+    registerBlock(String name,
+                  List<RegistryObject<Item>> tab, List<RegistryObject<Block>> model, Supplier<Block> block) {
+        RegistryObject<Block> toReturn = BLOCKS.register(name, block);
         tab.add(registerBlockItem(name, toReturn));
+        model.add(toReturn);
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+    private static RegistryObject<Item> registerBlockItem(String name, RegistryObject<Block> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 

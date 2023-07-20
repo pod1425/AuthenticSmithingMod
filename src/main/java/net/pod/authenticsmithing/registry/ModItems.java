@@ -6,16 +6,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.pod.authenticsmithing.AuthenticSmithingMod;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-import static net.pod.authenticsmithing.registry.CreativeTabLists.*;
-import static net.pod.authenticsmithing.registry.ModelLists.COMMON;
+
+import static net.pod.authenticsmithing.registry.list.CreativeTabLists.*;
+import static net.pod.authenticsmithing.registry.list.ModelLists.COMMON;
 /*
     Just a template to copy
 

@@ -1,0 +1,7 @@
+// 1.20.1	2023-07-20T16:44:46.9277289	Block States: authenticsmithing
+2863c2c58c8b475d8195b311403186dd653cd1c3 assets/authenticsmithing/blockstates/raw_tin_block.json
+35bed3bf2647731205874a67f362c830683aca17 assets/authenticsmithing/blockstates/tin_block.json
+450c5da78bc9650e9b2d48f2ad7896be33f76e30 assets/authenticsmithing/models/block/raw_tin_block.json
+38aaf8645f55a3266f2c14863e28daf579519eb6 assets/authenticsmithing/models/block/tin_block.json
+55c14667fb452ac35f099098a5a02366cd25169d assets/authenticsmithing/models/item/raw_tin_block.json
+a4799fb516ec06003d385ae8b0542ac0f493cfaf assets/authenticsmithing/models/item/tin_block.json

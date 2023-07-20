@@ -1,4 +1,4 @@
-package net.pod.authenticsmithing.registry;
+package net.pod.authenticsmithing.registry.list;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.RegistryObject;

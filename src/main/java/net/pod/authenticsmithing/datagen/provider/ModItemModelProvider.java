@@ -8,13 +8,8 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.pod.authenticsmithing.AuthenticSmithingMod;
-import net.pod.authenticsmithing.registry.CreativeTabLists;
-import net.pod.authenticsmithing.registry.ModItems;
-import net.pod.authenticsmithing.registry.ModelLists;
-import net.pod.authenticsmithing.util.FileHelper;
+import net.pod.authenticsmithing.registry.list.ModelLists;
 
-import java.io.File;
-import java.net.URL;
 import java.util.*;
 
 public class ModItemModelProvider extends ItemModelProvider {
