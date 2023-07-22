@@ -30,7 +30,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AuthenticSmithingMod.MODID);
 
-    public static final RegistryObject<Block> AMBER_ORE = registerBlock("amber_block", MOD_BLOCKS, BLOCK_CUBE,
+    public static final RegistryObject<Block> AMBER_ORE = registerBlock("amber_ore", MOD_BLOCKS, BLOCK_CUBE,
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_ORE)));
 
     public static final RegistryObject<Block> CUT_AMBER_BLOCK = registerBlock("cut_amber_block", MOD_BLOCKS, BLOCK_CUBE,
@@ -80,6 +80,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SILVER_ORE = registerBlock("silver_ore", MOD_BLOCKS, BLOCK_CUBE,
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+    public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore", MOD_BLOCKS, BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE).strength(3f, 3f)));
 
     public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", MOD_BLOCKS, BLOCK_CUBE,
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)

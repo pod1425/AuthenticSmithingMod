@@ -16,7 +16,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AuthenticSmithingMod.MODID);
 
     public static final RegistryObject<CreativeModeTab> MOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("mod_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OAK_BARK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CUT_QUARTZ_BLOCK.get()))
                     .title(Component.translatable("creativetab.blocks_tab"))
                     .displayItems((displayParameters, output) -> {
                         for (RegistryObject<Item> item : CreativeTabLists.MOD_BLOCKS) {
@@ -32,7 +32,7 @@ public class ModCreativeModeTabs {
                         }
                     }).build());
     public static final RegistryObject<CreativeModeTab> MOD_PARTS_TAB = CREATIVE_MODE_TABS.register("mod_parts_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OAK_BARK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.IRON_PICKAXE_HEAD.get()))
                     .title(Component.translatable("creativetab.parts_tab"))
                     .displayItems((displayParameters, output) -> {
                         for (RegistryObject<Item> item : CreativeTabLists.MOD_PARTS) {
@@ -40,7 +40,7 @@ public class ModCreativeModeTabs {
                         }
                     }).build());
     public static final RegistryObject<CreativeModeTab> MOD_TOOLS_TAB = CREATIVE_MODE_TABS.register("mod_tools_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OAK_BARK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BRONZE_PICKAXE.get()))
                     .title(Component.translatable("creativetab.tools_tab"))
                     .displayItems((displayParameters, output) -> {
                         for (RegistryObject<Item> item : CreativeTabLists.MOD_TOOLS) {
@@ -48,10 +48,10 @@ public class ModCreativeModeTabs {
                         }
                     }).build());
     public static final RegistryObject<CreativeModeTab> MOD_JEWELERY_TAB = CREATIVE_MODE_TABS.register("mod_jewelery_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.OAK_BARK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CUT_LAPIS.get()))
                     .title(Component.translatable("creativetab.jewelery_tab"))
                     .displayItems((displayParameters, output) -> {
-                        for (RegistryObject<Item> item : CreativeTabLists.MOD_JEWELERY) {
+                        for (RegistryObject<Item> item : CreativeTabLists.MOD_JEWELRY) {
                             output.accept(item.get());
                         }
                     }).build());

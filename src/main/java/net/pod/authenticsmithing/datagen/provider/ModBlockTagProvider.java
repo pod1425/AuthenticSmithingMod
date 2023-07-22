@@ -20,9 +20,52 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        //this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add();
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                ModBlocks.AMBER_ORE.get(),
+                ModBlocks.CUT_QUARTZ_BLOCK.get(),
+                ModBlocks.CUT_REDSTONE_BLOCK.get(),
+                ModBlocks.CUT_LAPIS_BLOCK.get(),
+                ModBlocks.CUT_DIAMOND_BLOCK.get(),
+                ModBlocks.CUT_AMBER_BLOCK.get(),
+                ModBlocks.CUT_AMETHYST_BLOCK.get(),
+                ModBlocks.DEEPSLATE_SILVER_ORE.get(),
+                ModBlocks.DEEPSLATE_TIN_ORE.get(),
+                ModBlocks.DEEPSLATE_LEAD_ORE.get(),
+                ModBlocks.DEEPSLATE_AMBER_ORE.get(),
+                ModBlocks.LEAD_BLOCK.get(),
+                ModBlocks.LEAD_ORE.get(),
+                ModBlocks.RAW_SILVER_BLOCK.get(),
+                ModBlocks.RAW_LEAD_BLOCK.get(),
+                ModBlocks.RAW_TIN_BLOCK.get(),
+                ModBlocks.SILVER_BLOCK.get(),
+                ModBlocks.SILVER_ORE.get(),
+                ModBlocks.TIN_BLOCK.get()
+        );
 
-        //this.tag(BlockTags.NEEDS_IRON_TOOL).add();
+        this.tag(BlockTags.NEEDS_IRON_TOOL).add(
+                ModBlocks.CUT_REDSTONE_BLOCK.get(),
+                ModBlocks.CUT_LAPIS_BLOCK.get(),
+                ModBlocks.CUT_DIAMOND_BLOCK.get(),
+                ModBlocks.CUT_AMBER_BLOCK.get(),
+                ModBlocks.CUT_QUARTZ_BLOCK.get(),
+                ModBlocks.DEEPSLATE_SILVER_ORE.get(),
+                ModBlocks.DEEPSLATE_LEAD_ORE.get(),
+                ModBlocks.DEEPSLATE_AMBER_ORE.get(),
+                ModBlocks.LEAD_BLOCK.get(),
+                ModBlocks.LEAD_ORE.get(),
+                ModBlocks.RAW_SILVER_BLOCK.get(),
+                ModBlocks.RAW_LEAD_BLOCK.get(),
+                ModBlocks.SILVER_BLOCK.get(),
+                ModBlocks.SILVER_ORE.get()
+        );
+
+        this.tag(BlockTags.NEEDS_STONE_TOOL).add(
+                ModBlocks.CUT_AMETHYST_BLOCK.get(),
+                ModBlocks.DEEPSLATE_TIN_ORE.get(),
+                ModBlocks.RAW_TIN_BLOCK.get(),
+                ModBlocks.TIN_BLOCK.get(),
+                ModBlocks.TIN_ORE.get()
+        );
 
         //this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add();
     }

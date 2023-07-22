@@ -22,12 +22,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         for (RegistryObject<Item> item : ModelLists.COMMON) {
             simpleItem(item);
         }
+        for (RegistryObject<Item> item : ModelLists.TOOL) {
+            toolItem(item);
+        }
         Map<String, RegistryObject<Item>> customItems = new HashMap<>();
         // add custom model items here...
 
         for (Map.Entry<String, RegistryObject<Item>> entry : customItems.entrySet()) {
             customModelItem(entry.getValue(), entry.getKey());
         }
+    }
+
+    private ItemModelBuilder toolItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(AuthenticSmithingMod.MODID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
