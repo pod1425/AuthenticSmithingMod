@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "authenticsmithing:cut_quartz_block"
+          "name": "authenticsmithing:polished_quartz_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "authenticsmithing:blocks/cut_quartz_block"
+  "random_sequence": "authenticsmithing:blocks/polished_quartz_block"
 }

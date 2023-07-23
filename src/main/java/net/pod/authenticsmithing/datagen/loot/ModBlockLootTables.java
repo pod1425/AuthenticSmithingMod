@@ -1,10 +1,8 @@
 package net.pod.authenticsmithing.datagen.loot;
 
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -26,12 +24,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.CUT_AMBER_BLOCK.get());
-        dropSelf(ModBlocks.CUT_AMETHYST_BLOCK.get());
-        dropSelf(ModBlocks.CUT_DIAMOND_BLOCK.get());
-        dropSelf(ModBlocks.CUT_LAPIS_BLOCK.get());
-        dropSelf(ModBlocks.CUT_QUARTZ_BLOCK.get());
-        dropSelf(ModBlocks.CUT_REDSTONE_BLOCK.get());
+        dropSelf(ModBlocks.POLISHED_AMBER_BLOCK.get());
+        dropSelf(ModBlocks.POLISHED_AMETHYST_BLOCK.get());
+        dropSelf(ModBlocks.POLISHED_DIAMOND_BLOCK.get());
+        dropSelf(ModBlocks.POLISHED_LAPIS_BLOCK.get());
+        dropSelf(ModBlocks.POLISHED_QUARTZ_BLOCK.get());
+        dropSelf(ModBlocks.POLISHED_REDSTONE_BLOCK.get());
         dropSelf(ModBlocks.LEAD_BLOCK.get());
         dropSelf(ModBlocks.RAW_LEAD_BLOCK.get());
         dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());

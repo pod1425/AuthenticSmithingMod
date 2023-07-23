@@ -16,7 +16,7 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AuthenticSmithingMod.MODID);
 
     public static final RegistryObject<CreativeModeTab> MOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("mod_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CUT_QUARTZ_BLOCK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.POLISHED_QUARTZ_BLOCK.get()))
                     .title(Component.translatable("creativetab.blocks_tab"))
                     .displayItems((displayParameters, output) -> {
                         for (RegistryObject<Item> item : CreativeTabLists.MOD_BLOCKS) {

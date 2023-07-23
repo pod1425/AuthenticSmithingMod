@@ -3,7 +3,6 @@ package net.pod.authenticsmithing.datagen.provider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.pod.authenticsmithing.AuthenticSmithingMod;
@@ -22,12 +21,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ModBlocks.AMBER_ORE.get(),
-                ModBlocks.CUT_QUARTZ_BLOCK.get(),
-                ModBlocks.CUT_REDSTONE_BLOCK.get(),
-                ModBlocks.CUT_LAPIS_BLOCK.get(),
-                ModBlocks.CUT_DIAMOND_BLOCK.get(),
-                ModBlocks.CUT_AMBER_BLOCK.get(),
-                ModBlocks.CUT_AMETHYST_BLOCK.get(),
+                ModBlocks.POLISHED_QUARTZ_BLOCK.get(),
+                ModBlocks.POLISHED_REDSTONE_BLOCK.get(),
+                ModBlocks.POLISHED_LAPIS_BLOCK.get(),
+                ModBlocks.POLISHED_DIAMOND_BLOCK.get(),
+                ModBlocks.POLISHED_AMBER_BLOCK.get(),
+                ModBlocks.POLISHED_AMETHYST_BLOCK.get(),
                 ModBlocks.DEEPSLATE_SILVER_ORE.get(),
                 ModBlocks.DEEPSLATE_TIN_ORE.get(),
                 ModBlocks.DEEPSLATE_LEAD_ORE.get(),
@@ -43,11 +42,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(
-                ModBlocks.CUT_REDSTONE_BLOCK.get(),
-                ModBlocks.CUT_LAPIS_BLOCK.get(),
-                ModBlocks.CUT_DIAMOND_BLOCK.get(),
-                ModBlocks.CUT_AMBER_BLOCK.get(),
-                ModBlocks.CUT_QUARTZ_BLOCK.get(),
+                ModBlocks.POLISHED_REDSTONE_BLOCK.get(),
+                ModBlocks.POLISHED_LAPIS_BLOCK.get(),
+                ModBlocks.POLISHED_DIAMOND_BLOCK.get(),
+                ModBlocks.POLISHED_AMBER_BLOCK.get(),
+                ModBlocks.POLISHED_QUARTZ_BLOCK.get(),
                 ModBlocks.DEEPSLATE_SILVER_ORE.get(),
                 ModBlocks.DEEPSLATE_LEAD_ORE.get(),
                 ModBlocks.DEEPSLATE_AMBER_ORE.get(),
@@ -60,7 +59,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         );
 
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
-                ModBlocks.CUT_AMETHYST_BLOCK.get(),
+                ModBlocks.POLISHED_AMETHYST_BLOCK.get(),
                 ModBlocks.DEEPSLATE_TIN_ORE.get(),
                 ModBlocks.RAW_TIN_BLOCK.get(),
                 ModBlocks.TIN_BLOCK.get(),

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "authenticsmithing:cut_amber_block"
+          "name": "authenticsmithing:polished_lapis_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "authenticsmithing:blocks/cut_amber_block"
+  "random_sequence": "authenticsmithing:blocks/polished_lapis_block"
 }

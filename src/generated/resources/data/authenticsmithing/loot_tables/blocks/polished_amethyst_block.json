@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "authenticsmithing:cut_amethyst_block"
+          "name": "authenticsmithing:polished_amethyst_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "authenticsmithing:blocks/cut_amethyst_block"
+  "random_sequence": "authenticsmithing:blocks/polished_amethyst_block"
 }

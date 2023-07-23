@@ -1,12 +1,12 @@
 {
   "values": [
     "authenticsmithing:amber_ore",
-    "authenticsmithing:cut_quartz_block",
-    "authenticsmithing:cut_redstone_block",
-    "authenticsmithing:cut_lapis_block",
-    "authenticsmithing:cut_diamond_block",
-    "authenticsmithing:cut_amber_block",
-    "authenticsmithing:cut_amethyst_block",
+    "authenticsmithing:polished_quartz_block",
+    "authenticsmithing:polished_redstone_block",
+    "authenticsmithing:polished_lapis_block",
+    "authenticsmithing:polished_diamond_block",
+    "authenticsmithing:polished_amber_block",
+    "authenticsmithing:polished_amethyst_block",
     "authenticsmithing:deepslate_silver_ore",
     "authenticsmithing:deepslate_tin_ore",
     "authenticsmithing:deepslate_lead_ore",
