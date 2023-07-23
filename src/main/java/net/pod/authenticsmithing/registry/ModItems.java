@@ -233,6 +233,37 @@ public class ModItems {
     public static final RegistryObject<Item> WOODEN_SWORD_PARTS = registerItem("wooden_sword_parts",
             List.of(MOD_PARTS), COMMON, () -> new PartItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> BRONZE_INGOT = registerItem("bronze_ingot",
+            List.of(MOD_MATERIALS), COMMON, () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ELECTRUM_INGOT = registerItem("electrum_ingot",
+            List.of(MOD_MATERIALS), COMMON, () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_AXE = registerItem("silver_axe",
+            List.of(MOD_TOOLS), TOOL, () -> new AxeItem(ModToolTiers.SILVER, 3.0f, -2.8f, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_AXE_HEAD = registerItem("silver_axe_head",
+            List.of(MOD_PARTS), COMMON, () -> new PartItem(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_BLADE = registerItem("silver_blade",
+            List.of(MOD_PARTS), COMMON, () -> new PartItem(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_COUNTERWEIGHT = registerItem("silver_counterweight",
+            List.of(MOD_PARTS), COMMON, () -> new PartItem(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_GUARD = registerItem("silver_guard",
+            List.of(MOD_PARTS), COMMON, () -> new PartItem(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_HOE = registerItem("silver_hoe",
+            List.of(MOD_TOOLS), TOOL, () -> new HoeItem(ModToolTiers.SILVER, 1, -3.0f, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_HOE_HEAD = registerItem("silver_hoe_head",
+            List.of(MOD_PARTS), COMMON, () -> new PartItem(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_PICKAXE = registerItem("silver_pickaxe",
+            List.of(MOD_TOOLS), TOOL, () -> new PickaxeItem(ModToolTiers.SILVER, 1, -2.8f, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_PICKAXE_HEAD = registerItem("silver_pickaxe_head",
+            List.of(MOD_PARTS), COMMON, () -> new PartItem(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_SHOVEL = registerItem("silver_shovel",
+            List.of(MOD_TOOLS), TOOL, () -> new ShovelItem(ModToolTiers.SILVER, 1.5f, -3.0f, new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_SHOVEL_HEAD = registerItem("silver_shovel_head",
+            List.of(MOD_PARTS), COMMON, () -> new PartItem(new Item.Properties()));
+    public static final RegistryObject<Item> SILVER_SWORD = registerItem("silver_sword",
+            List.of(MOD_TOOLS), TOOL, () -> new SwordItem(ModToolTiers.SILVER, 3, -2.4f, new Item.Properties()));
+    public static final RegistryObject<Item> STEEL_INGOT = registerItem("steel_ingot",
+            List.of(MOD_MATERIALS), COMMON, () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

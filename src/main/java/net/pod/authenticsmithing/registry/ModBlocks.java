@@ -93,6 +93,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block", List.of(MOD_BLOCKS), BLOCK_CUBE,
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK)));
 
+    public static final RegistryObject<Block> RAW_EMERALD_BLOCK = registerBlock("raw_emerald_block", List.of(MOD_BLOCKS), BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
+    public static final RegistryObject<Block> RAW_QUARTZ_BLOCK = registerBlock("raw_quartz_block", List.of(MOD_BLOCKS), BLOCK_CUBE,
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
+
 
     private static RegistryObject<Block> registerBlock(String name, List<List<RegistryObject<Item>>> tabs,
                                                        List<RegistryObject<Block>> model, Supplier<Block> block) {

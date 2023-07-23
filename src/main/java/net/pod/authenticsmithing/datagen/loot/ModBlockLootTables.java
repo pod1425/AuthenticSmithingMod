@@ -36,6 +36,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.SILVER_BLOCK.get());
         dropSelf(ModBlocks.TIN_BLOCK.get());
         dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
+        dropSelf(ModBlocks.RAW_EMERALD_BLOCK.get());
+        dropSelf(ModBlocks.RAW_QUARTZ_BLOCK.get());
         this.add(ModBlocks.TIN_ORE.get(),
                 block -> createMultipleItemDrops(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get(), 1f, 3f));
         this.add(ModBlocks.AMBER_ORE.get(),
